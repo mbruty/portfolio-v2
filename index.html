@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Bruty</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                console.log(anchor);
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="headline">
+        <div class="card">
+            <img src="https://avatars.githubusercontent.com/u/57625243?v=4" alt="Picture of michael" class="avatar"
+                width="128px" height="128px">
+            <div class="card-content">
+                <h1>Michael Bruty</h1>
+                <p>Hey there, I'm Michael - a highly-skilled developer with a strong focus on full-stack development.
+                    React is my bread and butter, but I'm also well-versed in Vue and Angular. I am highly skilled in
+                    building websites and APIs utilising Dotnet MVC and Blazor for my professional projects. However,
+                    when it comes to my personal projects, I opt for Node or Spring as my go-to technologies.</p>
+                <p>
+                    I am proficient in SQL from my professional experience and have gained exposure to Redis, MongoDB,
+                    and Neo4J through my studies.</p>
+                <p>I have a strong dedication to creating websites that are user-friendly and accessible to all. My
+                    ultimate goal is to make a positive impact on both people's lives and the environment.</p>
+                <div class="card-footer">
+                    <a href="https://github.com/mbruty" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/mike-bruty/" target="_blank">LinkedIn</a>
+                    <a href="mailto:mike@bruty.net">Email</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="#content">
+                <div class="scroll-to">
+                    <img style="margin: 0 auto" src="public/scroll.svg" alt="Scroll to icon" width="40">
+                    <p>Skip to main content</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="content">
+        <h2>Project Timeline</h2>
+        <div class="timeline">
+            <div class="label">
+                <div class="row">
+                    <p>Dissertation project</p>
+                    <p><span class="date">May 2023</span></p>
+                </div>
+            </div>
+            <div class="content-card">
+                <p>My dissertation focused on developing an online teaching platform that enhances existing platforms,
+                    such as leetcode and hackerrank, intending to cater to higher-education institutions.</p>
+                <p>I contributed significantly to developing a remote code execution engine that can scale using docker,
+                    AWS, and Kubernetes. I conducted several usability studies to ensure that the interface was
+                    user-friendly.</p>
+                <img src="public/code-lab.png" alt="Screenshot of the code-lab platform" class="preview">
+                <div class="links">
+                    <a href="https://code-lab.bruty.net/" target="_blank" class="button">Live Site</a>
+                    <a href="https://www.youtube.com/watch?v=7LIGyoofDmk" target="_blank" class="button">Video
+                        Demonstration</a>
+                </div>
+                <div class="technologies">
+                    <div class="chip chip--react">
+                        <p>React</p>
+                    </div>
+                    <div class="chip chip--typescript">
+                        <p>TypeScript</p>
+                    </div>
+                    <div class="chip chip--kotlin">
+                        <p>Kotlin</p>
+                    </div>
+                    <div class="chip chip--rust">
+                        <p>Rust</p>
+                    </div>
+                    <div class="chip">
+                        <p>RabbitMQ</p>
+                    </div>
+                    <div class="chip">
+                        <p>Kubernetes</p>
+                    </div>
+                    <div class="chip">
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div class="chip">
+                        <p>Redis</p>
+                    </div>
+                    <div class="chip">
+                        <p>AWS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="label">
+                <div class="row">
+                    <p>Data Vis Research</p>
+                    <p><span class="date">May 2023</span></p>
+                </div>
+            </div>
+            <div class="content-card">
+                <p>I wrote a research paper proposing innovative approaches to visualise a dataset for the
+                    Human-Computer-Interaction module. I performed in-depth research on the latest techniques for the
+                    data type and merged them with my fresh visualisation ideas. I then crafted high-quality mockups and
+                    ran a study to determine each visualisation's efficacy.</p>
+                <p>This project showcases four representations of the open-reaction database. The first visualisation
+                    offers a comprehensive dataset overview, enabling users to quickly determine its suitability. The
+                    second visualisation filters reactions by a single element, displaying their connections on a
+                    hyperbolic browser. Parallel coordinates are employed to compare a set of reactions with the same
+                    product. Lastly, a modified reaction path analysis diagram is combined with a heatmap to compare a
+                    small number of paths, providing insightful and nuanced analysis.</p>
+                <img src="public/comp3007.png" alt="Visualisations from the report" class="preview">
+                <div class="links">
+                    <a href="public/COMP3007 Report.pdf" target="_blank" class="button">View PDF</a>
+                </div>
+                <div class="technologies">
+                    <div class="chip">
+                        <p>Figma</p>
+                    </div>
+                </div>
+            </div>
+            <div class="label">
+                <div class="row">
+                    <p>Web-based multiplayer&nbsp;game</p>
+                    <p><span class="date">January 2023 </span></p>
+                </div>
+            </div>
+            <div class="content-card">
+                <p>This module involves building a website using JavaScript for the full stack, MongoDB for the
+                    database, and web sockets for real-time communication. In my project, I developed a trial game where
+                    a game master creates a series of trials that are either time-based or fastest to complete. Users
+                    bid on competing in the trial, with the top-two bidders being selected to compete. Other users can
+                    bet on who they believe will win the trial. The winners then play out the trial, with the winner
+                    receiving all the beans. Upon joining the game, users can upload profile pictures, and distributed
+                    users can participate through a video call using WebRTC.
+                </p>
+                <img src="public/comp3006.png" alt="Screenshot of the website" class="preview">
+                <div class="links">
+                    <a href="https://github.com/mbruty/trial-by-fire" target="_blank" class="button">Source Code</a>
+                    <a href="https://www.youtube.com/watch?v=OiSqOAlMohg&t=170s" target="_blank" class="button">Video
+                        Demonstration</a>
+                </div>
+                <div class="technologies">
+                    <div class="chip chip--react">
+                        <p>React</p>
+                    </div>
+                    <div class="chip chip--typescript">
+                        <p>TypeScript</p>
+                    </div>
+                    <div class="chip">
+                        <p>NextJS</p>
+                    </div>
+                    <div class="chip">
+                        <p>Socket.IO</p>
+                    </div>
+                    <div class="chip">
+                        <p>WebRTC</p>
+                    </div>
+                    <div class="chip">
+                        <p>MongoDB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="label">
+                <div class="row">
+                    <p>SCUBA Simulator</p>
+                    <p><span class="date">January 2023 </span></p>
+                </div>
+            </div>
+            <div class="content-card">
+                <p>I successfully developed a game using C++ and the OpenGL framework, which included a custom OBJ and
+                    GLTF model loader. Unlike most underwater games that use unrealistic blur filters to create an
+                    underwater effect, I utilized shaders to create more realistic lighting effects. By adding a
+                    depth-of-field effect that blurs objects farther away from the camera and a lighting shader that
+                    changes the colour of objects based on their distance from the player - red light only penetrates
+                    5m, green 25m, and blue 35m. These effects created a more immersive experience. As a result of my
+                    exceptional work, this project received a perfect score of 100%.
+                </p>
+                <p>A technical break-down of the effects can be seen on GitHub</p>
+                <img src="public/comp3016.png" alt="Screenshot of the game" class="preview">
+                <div class="links">
+                    <a href="https://github.com/mbruty/ScubaSim" target="_blank" class="button">Source Code</a>
+                    <a href="https://youtu.be/3IZtSvUnrOI?t=395" target="_blank" class="button">Video
+                        Demonstration</a>
+                </div>
+                <div class="technologies">
+                    <div class="chip chip--cpp">
+                        <p>C++</p>
+                    </div>
+                    <div class="chip chip">
+                        <p>OpenGL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="label">
+                <div class="row">
+                    <p>Software Development Placement GOSS Interactive</p>
+                    <p><span class="date">June&nbsp;2021 - July&nbsp;2022</span></p>
+                </div>
+            </div>
+            <div class="content-card">
+                <p>During my time at GOSS, I successfully collaborated with the creative design and CMS platform teams
+                    to extract article data from the database and present it on a website that is mobile-friendly,
+                    highly accessible and user-friendly. My primary responsibility was to create unique article
+                    templates in a client-facing capacity. I guided clients through identifying their needs, handed off
+                    the requirements to the design team for mockup creation, and completed the development process.</p>
+
+                <p> During my work experience, I contributed to back-end projects. This involved developing and
+                    troubleshooting workflows within a node.js microservice. These workflows occur after a form is
+                    submitted, for example, automatically creating a new article about a local event after a council
+                    member has approved it.</p>
+
+                <p> While I was coming up to speed with the GOSS platform, my responsibility was to develop new features
+                    for its framework. One of the noteworthy features I created was an upgraded tool for SEO. This
+                    involved generating JSON-LD objects to enhance search rankings and enable web pages to use Google
+                    rich results.
+                </p>
+                <div class="technologies">
+                    <div class="chip chip--dotnet">
+                        <p>C#</p>
+                    </div>
+                    <div class="chip">
+                        <p>MSSQL Server</p>
+                    </div>
+                </div>
+            </div>
+            <div class="label">
+                <div class="row">
+                    <p>Interface Design Microinternship</p>
+                    <p><span class="date">April&nbsp;2021 - May&nbsp;2021</span></p>
+                </div>
+            </div>
+            <div class="content-card">
+                <p>I completed a brief project to create an information dashboard system that displays the status of a
+                    network of security boxes in a user-friendly way. The system had to be compatible with a small
+                    7-inch monitor and easily adaptable for international use.</p>
+                <div class="technologies">
+                    <div class="chip">
+                        <p>Figma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
